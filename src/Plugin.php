@@ -4,6 +4,10 @@ namespace clarknelson\crafttimezonefield;
 
 use Craft;
 use craft\base\Plugin as BasePlugin;
+use craft\events\RegisterComponentTypesEvent;
+use clarknelson\crafttimezonefield\models\TimeZoneField;
+use craft\services\Fields;
+use yii\base\Event;
 
 /**
  * Timezone Field plugin
@@ -41,5 +45,12 @@ class Plugin extends BasePlugin
     {
         // Register event handlers here ...
         // (see https://craftcms.com/docs/4.x/extend/events.html to get started)
+        Event::on(
+            Fields::class,
+            Fields::EVENT_REGISTER_FIELD_TYPES,
+            function (RegisterComponentTypesEvent $event) {
+                $event->types[] = TimeZoneField::class;
+            }
+        );
     }
 }

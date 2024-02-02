@@ -1,0 +1,20 @@
+{# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css"/> #}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+{% set randomKey = random() %}
+<select id="timezone-select-{{randomKey}}" name="{{ name }}">
+    {% for option in options %}
+        <option value="{{ option.value }}" {% if value == option.value %}selected{% endif %}>{{ option.label }}</option>
+    {% endfor %}
+</select> 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var element = document.getElementById('fields-timezone-select-{{randomKey}}');
+    var choices = new Choices(element, {
+        searchEnabled: true,
+        shouldSort: false,
+    });
+});
+</script>
