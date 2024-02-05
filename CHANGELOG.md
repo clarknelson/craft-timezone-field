@@ -1,4 +1,4 @@
 # Release Notes for Timezone Field
 
-## 1.0.0
+## 4.0.0 - 2024-02-05
 - Initial release
