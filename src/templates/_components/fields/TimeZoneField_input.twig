@@ -1,6 +1,8 @@
-{# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css"/> #}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<styles>
+.choices__list--dropdown { z-index: 1000; }
+</styles>
 
 {% set randomKey = random() %}
 <select id="timezone-select-{{randomKey}}" name="{{ name }}">
@@ -18,3 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
