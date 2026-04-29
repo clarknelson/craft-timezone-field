@@ -21,8 +21,6 @@
     },
     "extra": {
         "handle": "timezone-field",
-        "class": "clarknelson\\crafttimezonefield\\Plugin",
-        "basePath": "src",
         "name": "Timezone Field",
         "developer": "Clark Nelson",
         "documentationUrl": ""
