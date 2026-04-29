@@ -16,12 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "clarknelson\\crafttimezonefield\\": "src/"
+            "clarknelson\\crafttimezonefield\\": "src"
         }
     },
     "extra": {
         "handle": "timezone-field",
         "class": "clarknelson\\crafttimezonefield\\Plugin",
+        "basePath": "src",
         "name": "Timezone Field",
         "developer": "Clark Nelson",
         "documentationUrl": ""
